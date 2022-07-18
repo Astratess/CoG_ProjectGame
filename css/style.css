@@ -10,19 +10,81 @@ main{
     justify-content: space-around;
     align-items: center;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+}
+
+a{
+    display: block;
+    color: white;
+    background-color: #a77738;
+    padding: 2em 7.5em;
+    margin: 0.5em;
+    border-radius: 5%;
+    text-decoration: none;
+    text-align: center;
+}
+
+a:hover{
+    background-color: #ca9a5a;
 }
 
 h1{
     background-color: #ca9a5a;
-    margin: 0.5em;
+    color: white;
+    padding: 0.5em;
+    margin: 0.2em;
+}
+
+.col{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#entry{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    border: 2px solid #a77738;
+    background-color: #ca9a5a;
+    font-size: 2rem;
+    color: white;
+    padding: 1em 2em;
+
+}
+
+button:hover{
+    background-color:#c98b3b;
 }
 
 .radius15{
-    border-radius: 15%;
+    border-radius: 10%;
 }
 
+#coloseum{
+    width: 100%;
+}
+
+#menu{
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+
+/* ===============
+     Inventory 
+================*/
+
+
 .character{
+    position: relative;
     height: 80vh;
     width: 40vw;
     padding: 2.5em;
@@ -48,6 +110,14 @@ h1{
     left: 0;
 }
 
+#back{
+    top: 5%;
+    left: 5%;
+    position: absolute;
+    border-radius: 50%;
+    padding: 1em 1.5em;
+}
+
 .inventory{
     width: 45vw;
     height: 80vh;
@@ -63,6 +133,7 @@ h1{
     padding: 1em;
     background-color: #ca9a5a;
     border-radius: 5%;
+    justify-content: center;
 }
 
 .item-box{

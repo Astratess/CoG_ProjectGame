@@ -3,81 +3,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventory</title>
+    <title>Colosseum of Glory</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <main>
-        <section class="character radius15">
-            <div class="holder radius15">
-                <img src="img/sola/bodysola.png" alt="" id="body">
-                <img src="img/sola/hair1.png" alt="" id="hair">
-                <img src="img/sola/broom.png" alt="" id="broom">
-                <img src="img/sola/dress.png" alt="" id="dress">
+        <div id="entry" class="container">
+            <h1>Welcome to the Colosseum!</h1>
+            <img id='coloseum' src="img/coloseum.png" alt="colosseum">
+            <button id="enter">Enter!</button>
+        </div>
+        <div id="menu">
+            <section class="character radius15">
+                <div class="holder radius15">
+                    <img src="img/sola/bodysola.png" alt="" id="body">
+                    <img src="" alt="" id="hair">
+                    <img src="" alt="" id="broom">
+                    <img src="" alt="" id="dress">
+                </div>
+            </section>
+            <div class="container">
+                <a href="#">Play Game</a>
+                <a href="inventory.html">Inventory</a>
+                <a href="#">Shop</a>
             </div>
-        </section>
-        <section class="inventory radius15">
-            <h1>Inventory</h1>
-            <div class="items">
-                <div class="item-box"><img class="hair item" src="img/sola/hair1.png" alt=""></div>
-                <div class="item-box"><img class="hair item" src="img/sola/hair2.png" alt=""></div>
-                <div class="item-box"><img class="dress item" src="img/sola/dress.png" alt=""></div>
-                <div class="item-box"><img class="dress item" src="img/sola/dress1.png" alt=""></div>
-                <div class="item-box"><img class="broom item" src="img/sola/broom.png" alt=""></div>
-                <div class="item-box"><img class="broom item" src="img/sola/firebroom.png" alt=""></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-                <div class="item-box"></div>
-            </div>
-        </section>
+        </div>
     </main>
 </body>
-<script src="js/script.js"></script>
+<script src="js/index.js"></script>
+<script src="js/renderChar.js"></script>
 </html>
