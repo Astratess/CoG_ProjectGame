@@ -4,6 +4,8 @@ const broomShop = document.getElementById('broom')
 const itemBox = document.querySelectorAll('.item-box')
 let inventoryShop = JSON.parse(localStorage.getItem('inventory'))
 let cognitzShop = 100;
+let cognitz = document.getElementById('cognitz')
+cognitz.innerHTML = `${JSON.parse(localStorage.getItem("cognitz"))} <img class="cognit" src="/img/cognitz.png">`
 if ("cognitz" in localStorage){
 
 } else{
@@ -62,6 +64,8 @@ buyButtons.forEach(button =>{
         localStorage.setItem("inventory", JSON.stringify(inventoryShop))
         localStorage.setItem("cognitz", `${cognitzShop}`)
         button.parentElement.style.display = "none"
+        cognitz.innerHTML = `${cognitzShop} <img class="cognit" src="/img/cognitz.png">`
+        console.log(cognitz.textContent)
         }
     })
 })
