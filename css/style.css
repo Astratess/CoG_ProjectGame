@@ -108,6 +108,8 @@ button:hover{
     height: 100%;
     top: 0;
     left: 0;
+    animation: 3s sola ease-in-out infinite;
+    transform: translateX(-15px) rotateZ(-0deg);
 }
 
 #back{
@@ -207,9 +209,22 @@ button:hover{
 
 .buyBtn{
     position: absolute;
-    bottom: -10%;
+    bottom: -15%;
     font-size: 12px;
     padding: 0.5rem 2rem;
     display: flex;
     justify-content: center;
+}
+
+
+@keyframes sola{
+  0%{
+    transform: translateX(-15px) rotateZ(-0deg);
+  }
+  50%{
+    transform: translateX(15px) rotateZ(2deg);
+  }
+  100%{
+    ransform: translateX(-15px) rotateZ(-0deg);
+  }
 }

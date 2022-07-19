@@ -9,7 +9,7 @@ let sola = {
 }
 
 if ("sola" in localStorage) {
-    
+    sola = JSON.parse(localStorage.getItem('sola'));
 } else {
     localStorage.setItem("sola", JSON.stringify(sola))
 }

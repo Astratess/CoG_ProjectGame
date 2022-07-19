@@ -1,112 +1,50 @@
-const hair = document.getElementById('hair')
-const dress = document.getElementById('dress')
-const broom = document.getElementById('broom')
+import {sola,inventory}  from "./objects.js"
+import {renderInventory,renderChar,checker} from "./renders.js"
+import {hair,dress,broom} from "./constants.js"
 const itemBox = document.querySelectorAll('.item-box')
 let cognitzInv = JSON.parse(localStorage.getItem('cognitz'))
 
-localStorage.setItem("cognitz" , `${cognitzInv}`)
+let solaArr = sola;
+let inventoryInv = inventory;
 
-let sola = {
-    hair: "img/sola/hair1.png",
-    dress: "img/sola/dress.png",
-    broom: "img/sola/broom.png"
-}
+  if ("sola" in localStorage && solaArr != JSON.parse(localStorage.getItem("sola"))) {
+        solaArr = JSON.parse(localStorage.getItem("sola"))
+    } else {
+        localStorage.setItem("sola", JSON.stringify(solaArr))
+    }
+    
+    if ("inventory" in localStorage && inventoryInv != JSON.parse(localStorage.getItem("inventory"))) {
+        inventoryInv = JSON.parse(localStorage.getItem("inventory"))
+    } else {
+        localStorage.setItem("inventory", JSON.stringify(inventory))
+    }
 
-let inventory = [
-    {
-        src: "img/sola/hair1.png",
-        piece: "hair"
-    }
-    ,
-    {
-        src: "img/sola/hair2.png",
-        piece: "hair"
-    }
-    ,
-    {
-        src: "img/sola/dress.png",
-        piece: "dress"
-    }
-    ,
-    {
-        src: "img/sola/dress1.png",
-        piece: "dress"
-    }
-    ,
-    {
-        src: "img/sola/broom.png",
-        piece: "broom"
-    }
-    ,
-    {
-        src: "img/sola/firebroom.png",
-        piece: "broom"
-    }
-    ,
-    {
-        src: "img/sola/hair3.png",
-        piece: "hair"
-    }
-    ,
-    {
-        src: "img/sola/icebroom.png",
-        piece: "broom"
-    }
-    ,
-    {
-        src: "img/sola/dress2.png",
-        piece: "dress"
-    }
-]
-
-if ("sola" in localStorage) {
-    sola = JSON.parse(localStorage.getItem("sola"))
-} else {
-    localStorage.setItem("sola", JSON.stringify(sola))
-}
-
-if ("inventory" in localStorage) {
-    inventory = JSON.parse(localStorage.getItem("inventory"))
-} else {
-    localStorage.setItem("inventory", JSON.stringify(inventory))
-}
-
-function renderInventory(){
-    for (let i = 0; i < inventory.length; i++){
-        const img = document.createElement('img')
-        itemBox[i].appendChild(img)
-        img.classList.add(`${inventory[i].piece}`, "item")
-        img.src = inventory[i].src
-    }
-}
+let cognitz = document.getElementById('cognitz')
+cognitz.innerHTML = `${JSON.parse(localStorage.getItem("cognitz"))} <img class="cognit" src="/img/cognitz.png">`
 
 
-function renderChar(){
-    console.log(sola)
-    hair.src = sola.hair
-    dress.src = sola.dress
-    broom.src = sola.broom
-}
 
-renderInventory()
+renderInventory(inventoryInv,itemBox)
 
 const items = document.querySelectorAll('.item')
 
 items.forEach(item => {
     item.addEventListener('click',()=>{
         if(item.classList.contains('hair')){
-            sola.hair = item.src;
+            solaArr.hair = item.src;
         }
         else if(item.classList.contains('dress')){
-            sola.dress = item.src;
+            solaArr.dress = item.src;
         }
         else if(item.classList.contains('broom')){
-            sola.broom = item.src;
+            solaArr.broom = item.src;
         }
-        localStorage.setItem("sola", JSON.stringify(sola))
-        localStorage.setItem("inventory", JSON.stringify(inventory))
-        renderChar();
+        localStorage.setItem("sola", JSON.stringify(solaArr))
+        localStorage.setItem("inventory", JSON.stringify(inventoryInv))
+        renderChar(solaArr);
+        console.log(solaArr)
+        console.log(localStorage.getItem("sola"))
     })
 });
 
-renderChar()
+renderChar(solaArr)
