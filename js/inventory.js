@@ -2,6 +2,9 @@ const hair = document.getElementById('hair')
 const dress = document.getElementById('dress')
 const broom = document.getElementById('broom')
 const itemBox = document.querySelectorAll('.item-box')
+let cognitzInv = JSON.parse(localStorage.getItem('cognitz'))
+
+localStorage.setItem("cognitz" , `${cognitzInv}`)
 
 let sola = {
     hair: "img/sola/hair1.png",
@@ -62,7 +65,7 @@ if ("sola" in localStorage) {
     localStorage.setItem("sola", JSON.stringify(sola))
 }
 
-if ("inventory" in localStorage && JSON.parse(localStorage.getItem("inventory")) == inventory) {
+if ("inventory" in localStorage) {
     inventory = JSON.parse(localStorage.getItem("inventory"))
 } else {
     localStorage.setItem("inventory", JSON.stringify(inventory))
