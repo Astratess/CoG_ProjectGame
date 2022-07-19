@@ -154,3 +154,33 @@ button:hover{
 .item-box img{
     width: 100%;
 }
+
+#body{
+    z-index: 1;
+}
+
+#hair{
+    z-index: 3;
+}
+
+#dress{
+    z-index: 2
+}
+#broom{
+    z-index: 0;
+}
+
+.dress{
+    margin-bottom: 45%;
+    transform: scale(1.5);
+}
+
+.hair{
+    margin-top: 30%;
+    margin-left: 20%;
+}
+
+.broom{
+    margin-bottom: 40%;
+}
+

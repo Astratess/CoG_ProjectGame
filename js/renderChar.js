@@ -8,7 +8,14 @@ let sola = {
     broom: "img/sola/broom.png"
 }
 
+if ("sola" in localStorage) {
+    
+} else {
+    localStorage.setItem("sola", JSON.stringify(sola))
+}
+
 function renderChar(){
+    sola = JSON.parse(localStorage.getItem("sola"))
     hair.src = sola.hair
     dress.src = sola.dress
     broom.src = sola.broom
