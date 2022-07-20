@@ -245,10 +245,14 @@ button:hover{
     .item-box{
         height: 3em;
     }
+    .item-box:hover > .buyBtn{
+        visibility: visible;
+    }
     .buyBtn{
         font-size: 8px;
         padding: 0.2em 0.5em;
         bottom: -30%;
+        visibility: hidden;
     }
     .buyBtn img{
         width: 1em;
