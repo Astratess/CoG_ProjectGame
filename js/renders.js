@@ -21,7 +21,7 @@ export function renderShop(shop,itemBox){
         img.classList.add(`${shop[i].piece}`, "item")
         img.src = shop[i].src
         itemBox[i].appendChild(btn);
-        btn.innerHTML= `${shop[i].price} <img class="cognit" src="/img/cognitz.png">`
+        btn.innerHTML= `${shop[i].price} <img class="cognit" src="../../img/cognitz.png">`
         btn.classList.add('buyBtn')
     }
 }
@@ -39,5 +39,5 @@ export function setCharItems(item,sola){
     }
 
 export function renderCognitz(cognitz){
-        cognitz.innerHTML = `${JSON.parse(localStorage.getItem("cognitz"))} <img class="cognit" src="../img/cognitz.png">`
+        cognitz.innerHTML = `${JSON.parse(localStorage.getItem("cognitz"))} <img class="cognit" src="../../img/cognitz.png">`
 }
