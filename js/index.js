@@ -1,5 +1,6 @@
 import {enter,entry,menu} from "./constants.js"
 import {checkObjects} from "./objects.js"
+import { renderCognitz } from "./renders.js";
 
 checkObjects();
 
@@ -8,9 +9,3 @@ enter.addEventListener('click',()=>{
     menu.style.display = "flex"
     console.log("working")
 })
-
-if("cognitz" in localStorage){
-    cognitz.innerHTML = `${JSON.parse(localStorage.getItem("cognitz"))} <img class="cognit" src="/img/cognitz.png">`
-} else{
-    localStorage.setItem('cognitz', 100)
-}

@@ -26,7 +26,7 @@ export function renderShop(shop,itemBox){
     }
 }
 
-export function previewChar(item,sola){
+export function setCharItems(item,sola){
     if(item.classList.contains('hair')){
         sola.hair = item.src;
     }
@@ -37,3 +37,7 @@ export function previewChar(item,sola){
         sola.broom = item.src;
     }
     }
+
+export function renderCognitz(cognitz){
+        cognitz.innerHTML = `${JSON.parse(localStorage.getItem("cognitz"))} <img class="cognit" src="/img/cognitz.png">`
+}
