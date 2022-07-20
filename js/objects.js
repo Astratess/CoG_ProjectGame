@@ -80,7 +80,7 @@ export function checkObjects(){
     localStorage.setItem('shop', JSON.stringify(shop))
 
     if("cognitz" in localStorage){
-        cognitz.innerHTML = `${JSON.parse(localStorage.getItem("cognitz"))} <img class="cognit" src="/img/cognitz.png">`
+        cognitz.innerHTML = `${JSON.parse(localStorage.getItem("cognitz"))} <img class="cognit" src="img/cognitz.png">`
     } else{
         localStorage.setItem('cognitz', 100)
     }
