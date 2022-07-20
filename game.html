@@ -4,9 +4,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colosseum of Glory</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/game.css">
 </head>
 <body>
-    
+    <div class="game-holder">
+        <section class="player-up">
+            <div class="character-holder">
+                <div class="char-col1">
+                    <img src="img/game/sola/solaport.png" alt="">
+                    <div class="stats">
+                    <P id="hp1">HP: 10</P>
+                    <P id="hp1">Armor: 10</P>
+                    <P id="hp1">Movement: 3</P>
+                    <P id="hp1">Crystals: 2</P>
+                    </div>
+                </div>
+                <div class="char-col2">
+                    <img src="img/game/sola/solaskill1.png" alt="">
+                    <img src="img/game/sola/solaskill2.png" alt="">
+                    <img src="img/game/sola/solaskill3.png" alt="">
+                </div>
+            </div>
+            <div class="action-holder">
+                <div class="action">
+                    <div class="normal"><img src="img/game/sola/Fire Ball.png" alt=""></div>
+                    <div class="extra"> <img src="img/game/sola/Meteor.png" alt=""></div>
+                </div>
+                <div class="action">
+                    <div class="normal"></div>
+                    <div class="extra"></div>
+                </div>
+                <div class="action">
+                    <div class="normal"></div>
+                    <div class="extra"></div>
+                </div>
+            </div>
+            <div class="basic-actions">
+                <button id="passTurn"> Pass Turn</button>
+            </div>
+        </section>
+        <section class="gameboard">
+            <p id="round">Round : 1</p>
+            <div id="gameboard"></div>
+            <p id="turn">Turn : 1</p>
+        </section>
+        <section class="player-down">
+            <div class="character-holder">
+                <div class="char-col1">
+                    <img src="img/game/brann/brannport.png" alt="">
+                    <div class="stats">
+                    <P id="hp1">HP: 10</P>
+                    <P id="hp1">Armor: 10</P>
+                    <P id="hp1">Movement: 3</P>
+                    <P id="hp1">Crystals: 2</P>
+                    </div>
+                </div>
+                <div class="char-col2">
+                    <img src="img/game/brann/brannskill1.png" alt="">
+                    <img src="img/game/brann/brannskill2.png" alt="">
+                    <img src="img/game/brann/brannskill3.png" alt="">
+                </div>
+            </div>
+            <div class="action-holder">
+                <div class="action">
+                    <div class="normal"></div>
+                    <div class="extra"></div>
+                </div>
+                <div class="action">
+                    <div class="normal"></div>
+                    <div class="extra"></div>
+                </div>
+                <div class="action">
+                    <div class="normal"></div>
+                    <div class="extra"></div>
+                </div>
+            </div>
+            <div class="basic-actions">
+                
+            </div>
+        </section>
+    </div>
 </body>
+<script type="module" src="js/rendergame.js"></script>
 </html>
