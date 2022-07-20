@@ -1,16 +1,12 @@
-import {hair,dress,broom} from "./constants.js"
-import { renderChar,setCharItems,renderShop,renderCognitz } from "./renders.js";
-const itemBox = document.querySelectorAll('.item-box')
-let sola = JSON.parse(localStorage.getItem("sola"))
-let inventory = JSON.parse(localStorage.getItem('inventory'))
-let cognitz = document.getElementById('cognitz')
-let shop = JSON.parse(localStorage.getItem('shop'))
+import {hair,dress,broom,cognitz,itemsHolder} from "./constants.js"
+import { renderChar,setCharItems,renderShop,renderCognitz,renderItemBox } from "./renders.js";
+import {sola,inventory,shop} from "./objects.js"
 let cognitzCount = JSON.parse(localStorage.getItem('cognitz'))
 
+renderItemBox(itemsHolder)
+const itemBox = document.querySelectorAll('.item-box')
 renderCognitz(cognitz)
-
 renderChar(sola)
-
 renderShop(shop,itemBox);
 
 const buyButtons = document.querySelectorAll('.buyBtn')

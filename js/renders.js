@@ -41,3 +41,11 @@ export function setCharItems(item,sola){
 export function renderCognitz(cognitz){
         cognitz.innerHTML = `${JSON.parse(localStorage.getItem("cognitz"))} <img class="cognit" src="img/cognitz.png">`
 }
+
+export function renderItemBox(parent){
+    for(let i = 0; i < 56;i++){
+        let child = document.createElement('div')
+        child.classList.add('item-box')
+        parent.appendChild(child);
+    }
+}

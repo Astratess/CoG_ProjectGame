@@ -1,19 +1,23 @@
+export let sola = JSON.parse(localStorage.getItem('character'));
+export let inventory =  JSON.parse(localStorage.getItem('inventory'))
+export let shop = JSON.parse(localStorage.getItem('shop'))
+
 export function checkObjects(){
-    if("sola" in localStorage){
-        let sola = JSON.parse(localStorage.getItem('sola'))
+    if("character" in localStorage){
+         sola = JSON.parse(localStorage.getItem('character'))
     } else {
-        let sola = {
+         sola = {
             hair: "img/sola/hair1.png",
             dress: "img/sola/dress.png",
             broom: "img/sola/broom.png"
         }
-        localStorage.setItem('sola', JSON.stringify(sola));
+        localStorage.setItem('character', JSON.stringify(sola));
     }
     
     if('inventory' in localStorage){
-        let inventory = JSON.parse(localStorage.getItem('inventory'))
+         inventory = JSON.parse(localStorage.getItem('inventory'))
     } else{
-        let inventory = [
+         inventory = [
             {
                 src: "img/sola/hair1.png",
                 piece: "hair"

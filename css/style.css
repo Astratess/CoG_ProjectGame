@@ -246,7 +246,7 @@ button:hover{
         height: 3em;
     }
     .item-box:hover > .buyBtn{
-        display: flex;
+        display: fle;
     }
     .buyBtn{
         font-size: 8px;

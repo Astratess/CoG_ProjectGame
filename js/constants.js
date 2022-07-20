@@ -1,6 +1,5 @@
-export const enter = document.getElementById('enter')
-export const entry = document.getElementById('entry')
-export const menu = document.getElementById('menu')
 export const hair = document.getElementById('hair')
 export const dress = document.getElementById('dress')
 export const broom = document.getElementById('broom')
+export const cognitz = document.getElementById('cognitz')
+export const itemsHolder = document.getElementById('items')
