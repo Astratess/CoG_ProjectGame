@@ -39,5 +39,5 @@ export function setCharItems(item,sola){
     }
 
 export function renderCognitz(cognitz){
-        cognitz.innerHTML = `${JSON.parse(localStorage.getItem("cognitz"))} <img class="cognit" src="/img/cognitz.png">`
+        cognitz.innerHTML = `${JSON.parse(localStorage.getItem("cognitz"))} <img class="cognit" src="../img/cognitz.png">`
 }
