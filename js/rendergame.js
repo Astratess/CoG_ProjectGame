@@ -17,7 +17,6 @@ for (var i = 0; i < 4; i++) {
 tbl.appendChild(tbdy);
 gameboard.appendChild(tbl)
 
-
 let player1 = SolaGame
 let player2 = BrannGame
 let turn = 1;
@@ -25,7 +24,7 @@ let round = 1
 const renderPlayer = document.createElement('div')
 renderPlayer.classList.add('holder')
 renderPlayer.innerHTML = 
-`<img src="img/sola/bodysola.png" alt="" id="body">
+`<img src="${localStorage.getItem('body')}" alt="" id="body">
 <img src="${player1.display.hair}" alt="" id="hair">
 <img src="${player1.display.broom}" alt="" id="broom">
 <img src="${player1.display.dress}" alt="" id="dress">`
@@ -34,6 +33,7 @@ const renderPlayer2 = document.createElement('div')
 renderPlayer2.classList.add('holder')
 renderPlayer2.innerHTML = `<img src="${BrannGame.display}" alt="">`
 renderPlayer2.firstChild.style.animation = "0"
+
 
 const passTurn = document.getElementById('passTurn')
 const turnDisplay = document.getElementById('turn')
@@ -53,21 +53,26 @@ const tiles = document.querySelectorAll('td');
 tiles.forEach((tile) =>{
     tile.addEventListener('click',()=>{
         if(round % 2 == 1){
-            if (turn == 1 || turn == 4 || turn == 5  && tile.innerHTML == ""){
+            if ((turn == 1 || turn == 4 || turn == 5) && tile.innerHTML == ""){
             tile.appendChild(renderPlayer)
             }
-            else if (turn == 2 || turn == 3 || turn == 6 && tile.innerHTML == ""){
+            else if ((turn == 2 || turn == 3 || turn == 6) && tile.innerHTML == ""){
                 tile.appendChild(renderPlayer2);
             }
         }
         if(round % 2 == 0){
-            if (turn == 2 || turn == 3 || turn == 6  && tile.innerHTML == ""){
+            if ((turn == 2 || turn == 3 || turn == 6) && tile.innerHTML == ""){
                 tile.appendChild(renderPlayer)
             }
-            else if (turn == 1 || turn == 4 || turn == 5 && tile.innerHTML == ""){
+            else if ((turn == 1 || turn == 4 || turn == 5) && tile.innerHTML == ""){
                 tile.appendChild(renderPlayer2);
             }
         }
+        const broom = document.getElementById('broom')
+
+if(localStorage.getItem('currentPlayer') == "brann"){
+  broom.style.zIndex = 5;
+}
     })
 })
 

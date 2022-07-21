@@ -1,8 +1,12 @@
+*{
+  box-sizing: border-box;
+}
 body{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: bisque;
+    background-image: linear-gradient(bisque,#ca9a5a);
+    text-shadow: -1px -1px 0 #a77738, 1px -1px 0 #a77738, -1px 1px 0 #a77738, 1px 1px 0 #a77738;
 }
 
 
@@ -53,7 +57,6 @@ body{
 
 .game-holder section{
     width: 100%;
-    border: 2px solid blue;
   }
 
   .player-up,
@@ -62,7 +65,8 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #a77738;
+    background-color: rgb(148, 148, 148);
+    background-blend-mode: multiply;
   }
 
   .gameboard{
@@ -70,6 +74,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    color: white;
   }
 
   .gameboard p{
@@ -83,9 +88,18 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
+    border-top-right-radius: 2% ;
+    border-bottom-right-radius: 2% ;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    background-size: cover;
   }
 
+  .player-up{
+    background-image: url('/img/sola/sola.bg.jpg');
+  }
+.player-down{
+  background-image: url('/img/brann/brannbg.jpg');
+  }
   .char-col1{
     flex:2;
     height: 100%;
@@ -117,7 +131,6 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid brown;
   }
 
   .stats{
@@ -131,13 +144,13 @@ body{
     align-items: center;
     height: 100%;
     width: 45%;
-    border: 3px solid orange;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
   }
 
   .action{
     position: relative;
-    width: 15%;
-    height: 90%;
+    width: 13%;
+    height: 85%;
   }
 
   .normal{
@@ -146,7 +159,7 @@ body{
     position: absolute;
     top: -5%;
     left: -5%;
-    border: 2px dotted darkred;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
     z-index: 1;
   }
 
@@ -156,7 +169,7 @@ body{
   }
 
   .normal:hover > img{
-    transform: translateY(200%) scale(2);
+    transform: translateY(-200%) scale(2);
     transition: 1s;
   }
 
@@ -166,7 +179,7 @@ body{
     position: absolute;
     bottom: -5%;
     right: -5%;
-    border: 2px dotted skyblue;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
     z-index: 2;
   }
 
@@ -176,7 +189,7 @@ body{
   }
 
   .extra:hover > img{
-    transform: translateY(200%) scale(2);
+    transform: translateY(-200%) scale(2);
     transition: 1s;
   }
 
@@ -210,4 +223,21 @@ td:hover{
       ransform: translateX(-15px) rotateZ(-0deg);
     }
   }
-  
+
+  @media (max-width: 1000px) {
+
+    p{
+      font-size: 0.4rem;
+    }
+    .char-col1 img{
+      width: 2em;
+    }
+    .char-col2 img{
+      width: 1em;
+      margin: 0.05em
+    }
+    td{
+      width: 2em;
+      height: 2em;
+    }
+  }

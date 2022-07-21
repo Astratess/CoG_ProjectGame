@@ -2,7 +2,8 @@ body{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: bisque;
+    background-image: linear-gradient(bisque,#ca9a5a);
+    text-shadow: -1px -1px 0 #a77738, 1px -1px 0 #a77738, -1px 1px 0 #a77738, 1px 1px 0 #a77738;
 }
 
 main{
@@ -13,23 +14,28 @@ main{
     width: 100%;
 }
 
-a{
+main a,
+#select-char{
     display: block;
     color: white;
-    background-color: #a77738;
+    background-image: linear-gradient(to right,#ca9a5a,#f1c48b,#ca9a5a);
+    box-shadow: 0px 0px 20px rgba(201, 135, 50, 0.8);
     padding: 2em 7.5em;
-    margin: 0.5em;
+    margin: 1.5rem 0.5em;
+    font-size: 1.5rem;
+    font-weight: 700;
     border-radius: 5%;
     text-decoration: none;
     text-align: center;
+    text-shadow: -1px -1px 0 #a77738, 1px -1px 0 #a77738, -1px 1px 0 #a77738, 1px 1px 0 #a77738;
+    cursor: pointer;
 }
 
-a:hover{
-    background-color: #ca9a5a;
+#select-char{
+    font-weight: 300;
 }
 
 h1{
-    background-color: #ca9a5a;
     color: white;
     padding: 0.5em;
     margin: 0.2em;
@@ -49,16 +55,13 @@ h1{
 }
 
 button{
-    border: 2px solid #a77738;
-    background-color: #ca9a5a;
+    background-image: linear-gradient(to right,#ca9a5a,#f1c48b,#ca9a5a);
+    box-shadow: 0px 0px 20px rgba(201, 135, 50, 0.8);
+    border: none;
     font-size: 2rem;
     color: white;
     padding: 1em 2em;
 
-}
-
-button:hover{
-    background-color:#c98b3b;
 }
 
 .radius15{
@@ -91,15 +94,13 @@ button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: burlywood;
+    box-shadow: 0px 0px 20px rgba(201, 135, 50, 0.8);
 }
 
 .holder{
     width: 70%;
     height: 70%;
     position: relative;
-    background-color: #ca9a5a;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
 }
 
 .holder img{
@@ -113,11 +114,13 @@ button:hover{
 }
 
 #back{
+    font-size: 1rem;
     top: 5%;
     left: 5%;
     position: absolute;
     border-radius: 50%;
     padding: 1em 1.5em;
+    margin: 0.5em;
 }
 
 #cognitz{
@@ -125,9 +128,9 @@ button:hover{
     top: 5%;
     right: 5%;
     position: absolute;
-    border-radius: 10%;
+    border-radius: 20%;
     padding: 1em 1.5em;
-    background-color: #a77738; ;
+    background-image: linear-gradient(to bottom,#f8dcb8,#e6b16d,#f8dcb8);
     color: white;
 }
 
@@ -140,8 +143,8 @@ button:hover{
     width: 45vw;
     height: 80vh;
     padding: 2.5em;
-    background-color: burlywood;
     text-align: center;
+    box-shadow: 0px 0px 20px rgba(201, 135, 50, 0.8);
 }
 
 .items{
@@ -149,9 +152,10 @@ button:hover{
     grid-template-columns: repeat(8, 10%);
     grid-gap: 1em;
     padding: 1em;
-    background-color: #ca9a5a;
+    background-image: linear-gradient(to right,#ca9a5a ,bisque,#ca9a5a);
     border-radius: 5%;
     justify-content: center;
+    box-shadow: 0px 0px 20px rgba(201, 135, 50, 0.8);
 }
 
 .item-box{
@@ -162,12 +166,15 @@ button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(bisque,#ca9a5a);
+    cursor: pointer;
 }
 
 .item-box:hover,
-.item-box:focus
+.item-box:focus,
+.item-silouete:hover
 {
-    background-color: rgb(245, 200, 146);
+    background-image: linear-gradient(#e7a64c,#ecd1ae,#e7a64c);
 }
 
 .item-box img{
@@ -214,8 +221,88 @@ button:hover{
     padding: 0.5rem 2rem;
     display: flex;
     justify-content: center;
+    background-image: linear-gradient(to right, bisque,#ca9a5a);
+    cursor: pointer;
 }
 
+button:hover,
+a:hover,
+.buyBtn:hover,
+#select-char:hover{
+    background-image: linear-gradient(#e7a64c,#ecd1ae,#e7a64c);
+}
+
+.h1-flexie{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 20px rgba(201, 135, 50, 0.8);
+    background-image: linear-gradient(to right,bisque,#ca9a5a);
+    margin-bottom: 1em;
+    border-radius: 2%;
+}
+
+.holder-silouetes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item-silouete{
+    color: white;
+    margin-right: 1.5em;
+    width: 3em;
+    height: 3em;
+    border: 1px solid #a77738;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(bisque,#ca9a5a);
+    cursor: pointer;
+}
+
+.item-silouete img{
+    width: 100%;
+}
+
+.active-field{
+    background-image: linear-gradient(#e7a64c,#ecd1ae,#e7a64c);
+}
+
+
+.modal{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    z-index: 5;
+}
+
+.modal img{
+    width: 10em;
+    height: 10em;
+    margin: 1em;
+    border: 2px solid #a77738;
+}
+
+.modal img:hover{
+    opacity: 0.7;
+}
+
+@keyframes modal {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 @keyframes sola{
   0%{
@@ -263,5 +350,12 @@ button:hover{
     .dress{
         transform: scale(1);
         margin-bottom: 25%;
+    }
+    main a,
+    #select-char{
+        font-size: 0.6rem;
+    }
+    #back{
+        font-size: 0.5rem;
     }
 }
