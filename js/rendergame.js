@@ -49,6 +49,10 @@ passTurn.addEventListener('click',()=>{
     turnDisplay.textContent = `Turn : ${turn}`
 })
 
+if(localStorage.getItem('currentPlayer') == "Brann"){
+  broom.style.zIndex = 5;
+}
+
 const tiles = document.querySelectorAll('td');
 tiles.forEach((tile) =>{
     tile.addEventListener('click',()=>{
