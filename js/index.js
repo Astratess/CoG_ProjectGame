@@ -34,7 +34,7 @@ if (localStorage.getItem('currentPlayer') == null){
 localStorage.setItem('currentPlayer',"Sola");
 }
 if (localStorage.getItem('body') == null){
-    localStorage.setItem('body',"/img/sola/bodysola.png");
+    localStorage.setItem('body',"img/sola/bodysola.png");
     }
 body.src = localStorage.getItem('body')
 if(localStorage.getItem('currentPlayer') == "Brann"){
@@ -59,15 +59,15 @@ solaSelect.addEventListener('click',()=>{
     localStorage.setItem('currentPlayer','Sola')
     localStorage.setItem('Sola', localStorage.getItem('Sola'))
     localStorage.setItem('character', localStorage.getItem('Sola'))
-    localStorage.setItem('body', "/img/sola/bodysola.png")
-    localStorage.setItem('inventory', localStorage.getItem("inventorySola") )
-
+    localStorage.setItem('body', "img/sola/bodysola.png")
+    localStorage.setItem('inventory', localStorage.getItem("inventorySola"))
+    document.getElementById('mimi').style.background = "ulr('img/sola/sola.bg.jpg')"
 })
 
 brannSelect.addEventListener('click',()=>{
     localStorage.setItem('currentPlayer','Brann')
     localStorage.setItem('Brann', localStorage.getItem('Brann'))
     localStorage.setItem('character', localStorage.getItem('Brann'))
-    localStorage.setItem('body', "/img/brann/body.png")
+    localStorage.setItem('body', "img/brann/body.png")
     localStorage.setItem('inventory', localStorage.getItem("inventoryBrann") )
 })
