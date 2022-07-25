@@ -1,4 +1,5 @@
 import { BrannGame,SolaGame } from "./characters.js";
+import { broom } from "./constants.js";
 const gameboard = document.getElementById('gameboard');
 const tbl = document.createElement('table');
 tbl.setAttribute('border', '1');
@@ -49,10 +50,6 @@ passTurn.addEventListener('click',()=>{
     turnDisplay.textContent = `Turn : ${turn}`
 })
 
-if(localStorage.getItem('currentPlayer') == "Brann"){
-  broom.style.zIndex = 5;
-}
-
 const tiles = document.querySelectorAll('td');
 tiles.forEach((tile) =>{
     tile.addEventListener('click',()=>{
@@ -74,9 +71,9 @@ tiles.forEach((tile) =>{
         }
         const broom = document.getElementById('broom')
 
-if(localStorage.getItem('currentPlayer') == "brann"){
-  broom.style.zIndex = 5;
-}
+        if(localStorage.getItem('currentPlayer') == "Brann"){
+          broom.style.zIndex = 5;
+        }
     })
 })
 
