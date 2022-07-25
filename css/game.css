@@ -95,10 +95,10 @@ body{
   }
 
   .player-up{
-    background-image: url('/img/sola/sola.bg.jpg');
+    background-image: url('/img/brann/brannbg.jpg');
   }
 .player-down{
-  background-image: url('/img/brann/brannbg.jpg');
+  background-image: url('/img/sola/sola.bg.jpg');
   }
   .char-col1{
     flex:2;
